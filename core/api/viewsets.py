@@ -12,7 +12,7 @@ class PontoTuristicoViewSet(ModelViewSet):
     serializer_class = PontoTuristicoSerializer
 
 
-    def get_queryset(self):
+    def get_queryset(self):   
         id = self.request.query_params.get('id', None)
         nome = self.request.query_params.get('nome', None)
         descricao = self.request.query_params.get('descricao', None)
