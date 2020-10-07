@@ -26,7 +26,6 @@ class PontoTuristicoViewSet(ModelViewSet):
 
         if descricao:
             querysert = queryset.filter(descricao_iexact=descricao)
-        
         return queryset
         
     
