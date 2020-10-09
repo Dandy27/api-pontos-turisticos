@@ -34,7 +34,7 @@ router.register(r'avaliacoes', AvaliacaoViewSet)
 router.register(r'comentarios', ComentarioViewSet)
 router.register(r'enderecos', EnderecoViewSet)
 
-
+ 
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
