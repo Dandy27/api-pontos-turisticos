@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from core.models import PontoTuristico
 from .serializers import PontoTuristicoSerializer
+from rest_framework.authentication import TokenAuthentication
 
 
 class PontoTuristicoViewSet(ModelViewSet):
@@ -14,7 +15,7 @@ class PontoTuristicoViewSet(ModelViewSet):
     serializer_class = PontoTuristicoSerializer
     filter_backends = [SearchFilter]
     permission_classes = (IsAuthenticated,)
-    # authentication_classes = (Token)
+    authentication_classes = (TokenAuthentication,)
     search_fields = ['nome', 'descricao', '=enderecos__linha1']
     lookup_field = 'nome'
 
