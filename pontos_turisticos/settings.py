@@ -26,7 +26,6 @@ DEBUG = config('DEBUG', default=False,cast=bool)
 
 ALLOWED_HOSTS = ['dandy-pontos-turisticos.herokuapp.com', 'localhost:8000']
 
-
 # Application definition
 
 INSTALLED_APPS = [
